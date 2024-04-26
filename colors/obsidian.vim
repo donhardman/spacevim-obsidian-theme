@@ -11,17 +11,17 @@ set background=dark
 hi clear
 
 if exists("syntax_on")
-  syntax reset
+	syntax reset
 endif
 let g:colors_name="obsidian"
 
 let s:Colors = [
-  \'#a082bd', '#c4c8cc','#93c763',
-  \'#efc210', '#ec7600','#ff850a',
-  \'#d5cb7d', '#d39745','#4e5a5f',
-  \'#678cb1', '#5899c0','#5ab9be',
-  \'#1a252a', '#24333a','#5d803d',
-  \'#f1f2f3', '#3c5975','#374043']
+			\'#a082bd', '#c4c8cc','#93c763',
+			\'#efc210', '#ec7600','#ff850a',
+			\'#d5cb7d', '#d39745','#4e5a5f',
+			\'#678cb1', '#5899c0','#5ab9be',
+			\'#1a252a', '#24333a','#5d803d',
+			\'#f1f2f3', '#3c5975','#374043']
 
 " https://vimdoc.sourceforge.net/htmldoc/syntax.html#:highlight
 " Syntax
@@ -113,3 +113,13 @@ execute "hi GitGutterDelete guifg="       .s:Colors[4] . " gui=none"
 execute "hi link GitGutterAddLineNr GitGutterAdd"
 execute "hi link GitGutterChangeLineNr GitGutterChange"
 execute "hi link GitGutterDeleteLineNr GitGutterDelete"
+
+" Configure Spectre search panel
+execute "hi SpectreHeader guifg=" .s:Colors[13]." gui=none"
+execute "hi SpectreBody guifg="   .s:Colors[10]." gui=none"
+execute "hi SpectreFile guifg="   .s:Colors[2] ." gui=none"
+execute "hi SpectreDir guifg="    .s:Colors[13]." gui=none"
+execute "hi SpectreSearch guifg=" .s:Colors[15]." gui=none"
+execute "hi SpectreBorder guifg=" .s:Colors[13]." gui=none"
+execute "hi SpectreReplace guifg=".s:Colors[3] ." gui=none"
+
