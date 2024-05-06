@@ -25,8 +25,9 @@ let s:Colors = [
 
 " https://vimdoc.sourceforge.net/htmldoc/syntax.html#:highlight
 " Syntax
-execute "hi Normal  guifg="       .s:Colors[15]  . " guibg=" . s:Colors[12] . " gui=none"
-execute "hi Comment guifg="       .s:Colors[8]  . " guibg=" . s:Colors[12] . " gui=italic"
+execute "hi Normal  guifg="     .s:Colors[15]." guibg=".s:Colors[12]." gui=none"
+execute "hi NormalFloat  guifg=".s:Colors[15]." guibg=".s:Colors[12]." gui=none"
+execute "hi Comment guifg="     .s:Colors[8] ." guibg=".s:Colors[12]." gui=italic"
 
 execute "hi Constant guifg="      .s:Colors[3]  . " guibg=" . s:Colors[12] . " gui=none"
 execute "hi String guifg="        .s:Colors[5]  . " guibg=" . s:Colors[12] . " gui=none"
@@ -49,12 +50,12 @@ execute "hi Exception guifg="     .s:Colors[2]  . " guibg=" . s:Colors[12] . " g
 execute "hi PreProc guifg="       .s:Colors[0]  . " guibg=" . s:Colors[12] . " gui=none"
 execute "hi Include guifg="       .s:Colors[0]  . " guibg=" . s:Colors[12] . " gui=none"
 execute "hi Define guifg="        .s:Colors[0]  . " guibg=" . s:Colors[12] . " gui=none"
-execute "hi Macro guifg="         .s:Colors[0]  . " guibg=" . s:Colors[12] . " gui=none"
+execute "hi Macro guifg="         .s:Colors[1]  . " guibg=" . s:Colors[12] . " gui=none"
 execute "hi PreCon2it guifg="     .s:Colors[0]  . " guibg=" . s:Colors[12] . " gui=none"
 
-execute "hi Type guifg="          .s:Colors[2]  . " guibg=" . s:Colors[12] . " gui=none"
+execute "hi Type guifg="          .s:Colors[10]  . " guibg=" . s:Colors[12] . " gui=none"
 execute "hi StorageClass guifg="  .s:Colors[2]  . " guibg=" . s:Colors[12] . " gui=bold"
-execute "hi Structure guifg="     .s:Colors[2]  . " guibg=" . s:Colors[12] . " gui=none"
+execute "hi Structure guifg="     .s:Colors[1]  . " guibg=" . s:Colors[12] . " gui=none"
 execute "hi Typedef guifg="       .s:Colors[0]  . " guibg=" . s:Colors[12] . " gui=none"
 
 execute "hi Special guifg="       .s:Colors[2]  . " guibg=" . s:Colors[12] . " gui=none"
@@ -119,7 +120,10 @@ execute "hi SpectreHeader guifg=" .s:Colors[13]." gui=none"
 execute "hi SpectreBody guifg="   .s:Colors[10]." gui=none"
 execute "hi SpectreFile guifg="   .s:Colors[2] ." gui=none"
 execute "hi SpectreDir guifg="    .s:Colors[13]." gui=none"
-execute "hi SpectreSearch guifg=" .s:Colors[15]." gui=none"
+execute "hi SpectreSearch guifg=" .s:Colors[12]." guibg=".s:Colors[6]." gui=none"
 execute "hi SpectreBorder guifg=" .s:Colors[13]." gui=none"
-execute "hi SpectreReplace guifg=".s:Colors[3] ." gui=none"
+execute "hi SpectreReplace guifg=".s:Colors[12]." guibg=".s:Colors[2]." gui=none"
 
+" Configure tree sitter context
+execute "hi TreesitterContextBottom guisp="          .s:Colors[8] . " gui=underline"
+execute "hi TreesitterContextLineNumberBottom guisp=".s:Colors[8] . " gui=underline"
